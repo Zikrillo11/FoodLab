@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="FoodLab.BLL/FoodLab.BLL.csproj" />
+  <Project Path="FoodLab.DAL/FoodLab.DAL.csproj" />
+  <Project Path="FoodLab.Domain/FoodLab.Domain.csproj" />
+  <Project Path="FoodLab.Shared/FoodLab.Shared.csproj" />
+  <Project Path="FoodLab/FoodLab.csproj" />
+</Solution>
