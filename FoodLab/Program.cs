@@ -1,4 +1,10 @@
 using FoodLab.DAL.Data;
+using FoodLab.Domain.Interfaces.Categories;
+using FoodLab.Domain.Interfaces.Orders;
+using FoodLab.Domain.Interfaces.Products;
+using FoodLab.Infrastructure.Repositories.Categories;
+using FoodLab.Infrastructure.Repositories.Orders;
+using FoodLab.Infrastructure.Repositories.Products;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +15,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
 var app = builder.Build();
 
